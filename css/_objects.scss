@@ -1,0 +1,102 @@
+.switch_recordar {
+  $width: 35px;
+  $height: 20px;
+
+  display: flex;
+  align-items: center;
+  p {
+    padding-left: 10px;
+  }
+  .contenedor {
+    padding-right: 10px;
+    display: inline-block;
+    width: $width;
+    height: $height;
+    border: 3px solid #bfbebe;
+    border-radius: $height;
+    position: relative;
+    cursor: pointer;
+    background-color: #f5f2f2;
+    transition: border-color 300ms;
+
+    .circulo {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      & + .toggle-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 30px;
+        transition: all 300ms;
+        &::before {
+          content: "";
+          cursor: pointer;
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          background-color: white;
+          border-radius: 50%;
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+          transition: all 300ms ease-in-out;
+        }
+      }
+      &:checked + .toggle-button {
+        background-color: $color_boton_ingresar;
+        &::before {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+.boton_ingreso {
+  display: flex;
+  align-items: flex-end;
+  .Ingresar {
+    width: 94px;
+    height: 33px;
+    background-color: $color_boton_ingresar;
+    color: $blanco;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  .Borrar {
+    width: 65px;
+    height: 23px;
+    border: none;
+    border-radius: 5px;
+    background-color: $color_secundario;
+    margin-left: 11px;
+    cursor: pointer;
+  }
+}
+
+.iconos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -10px;
+  .separador {
+    padding: 0px 5px;
+  }  
+}
+
+.contenedor_datos {
+    border: 2px solid $colo_primario;
+    border-radius: 5px;
+    height: 43px;
+    width: 240px;
+    padding: 7px 10px;
+    outline: none;
+    color: $colo_primario;
+    background: none;
+    font-weight: bolder;
+    &::placeholder {
+      color: $color_secundario;
+      font-weight: lighter;
+    }
+  }
+  

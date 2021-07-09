@@ -1,0 +1,125 @@
+@import "colores";
+@import "objects";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  //font font-family: ::afte;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: transparent linear-gradient(61deg, #ff415b 0%, #8c3b9f 100%) 0% 0%
+    no-repeat padding-box;
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+}
+.login {
+  width: 812px;
+  height: 506px;
+  box-shadow: 0px 1px 20px #00000034;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  margin: 0px 15px 0px 15px;
+
+  &-left {
+    width: 50%;
+    height: 100%;
+    background: transparent
+      linear-gradient(219deg, #3a173e 0%, #401840 52%, #8b2353 100%) 0% 0%
+      no-repeat padding-box;
+    box-shadow: 10px 0px 1px #00000066;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    &-main_image {
+      height: 286px;
+    }
+
+    h1 {
+      margin-top: 38px;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      opacity: 1;
+    }
+    &-container_de_parrafo {
+      margin-top: 33px;
+      margin-bottom: 73px;
+      p {
+        font-weight: 200;
+        color: var(--blanco);
+        text-align: center;
+        letter-spacing: 0.75px;
+        color: #ffffff;
+        opacity: 1;
+      }
+    }
+  }
+  &-right {
+    width: 50%;
+    height: 100%;
+    background-color: $blanco;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 1.15px;
+      color: #444444;
+      opacity: 1;
+    }
+    ul {
+      li {
+        list-style: none;
+        padding: 8px;
+        p {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    footer{
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items:flex-end;
+      margin-bottom: -50px;
+      p{
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------------
+
+@media screen and (max-width: 650px ) {
+  .login{
+    width: 400px;
+    &-left{
+      display: none;
+    }
+    &-right{
+      width: 100%;
+    }
+  }
+  
+}
+
+
+
+
+
+
